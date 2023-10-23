@@ -1,16 +1,16 @@
 import os
 import csv
-# Import data from the csv file.
+# Bring in data from the csv file.
 csvpath = "election_data.csv"
-# Calculate votes by candidate
+# add up votes by candidate
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
-    # Set up lists for candidate and candidatelist.
+    # create lists for candidate
     Candidate = []
     candidateList = []
     totalVoters = 0
-    # add that to a dictionary - votes
+    # add to list
     votes = {}
   #  CandidateDict = {}
 
@@ -35,7 +35,7 @@ with open(csvpath) as csvfile:
         print(i + ": " + str(PctVotes) +
               "% (" + str('{:,.0f}'.format(votes[i])) + ")")
     print("-------------------------")
-    # Declare a winner based on the highest number of votes.
+    # winner based on the highest number of votes.
     keyMax = max(votes, key=votes.get)
     print("Winner:  " + keyMax)
     print("-------------------------")

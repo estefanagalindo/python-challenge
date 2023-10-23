@@ -2,7 +2,7 @@ import os
 import csv
 from statistics import mean
 # Path to collect data from the Resources folder
-budget_data = os.path.join('.','Resources', 'budget_data.csv')
+budget_data = os.path.join('budget_data.csv')
 # Read in the CSV file
 with open(budget_data, 'r') as csvfile:
     # Split the data on commas
